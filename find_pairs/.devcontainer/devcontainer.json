@@ -1,0 +1,19 @@
+{
+  "name": "Royal Purple Pygame",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "forwardPorts": [6080],
+  "portsAttributes": {
+    "6080": {
+      "label": "Игровой рабочий стол",
+      "onAutoForward": "openBrowser"
+    }
+  },
+  "postCreateCommand": "python -m pip install -r requirements.txt",
+  "postStartCommand": "bash .devcontainer/start-desktop.sh",
+  "remoteEnv": {
+    "DISPLAY": ":0"
+  }
+}
+  
