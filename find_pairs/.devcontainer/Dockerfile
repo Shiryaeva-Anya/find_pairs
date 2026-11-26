@@ -6,4 +6,8 @@ RUN apt-get update && apt-get install -y \
     fluxbox \
     novnc \
     websockify \
+    libsdl2-dev \
+    libsdl2-image-dev \
+    libsdl2-mixer-dev \
+    libsdl2-ttf-dev \
     && rm -rf /var/lib/apt/lists/*
